@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section id="chat">
+        <div id="content">
+            <h1 id="center"> اختر دردشة حتي تقوم بالمراسله</h1>
+            <div id="conversation">
+                <nav id="nav-chat">
+                    <div class="nav-icon">
+                        <ul>
+                            <li><i class="fas fa-ellipsis-v"></i></li>
+                            <li><i class="fas fa-search"></i></li>
+                        </ul>
+                    </div>
+                    <div class="nav-info">
+                        <div class="text">
+                            <h1> محمود عويس</h1>
+                        </div> 
+                        <img src="images/friend-1.jpg" alt="طه">
+                    </div>
+                </nav>
+                <div id="message-1">
+                    <div id="talkbubble-1">
+                        <h1>ازيك</h1>
+                        <small>8:39</small>
+                        </div> <br>
+                </div>
+
+            </div>
+            <div id="typings" class="typing">
+                <span><i onclick="conversation()" class="fas fa-paper-plane"></i></span>
+                <input id="message" type="text" placeholder="كتابه رسالة">
+            </div>
+        </div>
+        <div id="users">
+            <div class="settings-box">
+                <div class="image-box">
+                    <img onclick="showinfo() " src="images/me.jpg" alt="mahmoud ewsi">
+                </div>
+                <div class="settings">
+                    <ul>
+                        <li><i class="fas fa-ellipsis-v"></i></li>
+                        <li><i class="fas fa-comment-alt"></i></li>
+                        <li><i class="fas fa-circle-notch"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="البحث عن دردشة أو البدء في دردشة جديدة"><span><i class="fas fa-search"></i></span>
+            </div>
+            <div class="user" onclick="showchat()">
+                <div class="user-img">
+                    <img  src="images/friend-1.jpg" alt="taha">
+                </div>
+                <div class="user-text">
+                    <div class="time">8:39 pm</div>
+                    <h2> محمود عويس</h2>
+                    <p>ازيك</p>
+                    <div class="decoration"></div>
+                </div>
+
+            </div>
+        </div>
+        <div id="info" class="info">
+            <div class="title">
+                <p>الملف الشخصي <span onclick="showinfo()"><i  class="fas fa-arrow-right"></i></span></p>
+            </div>
+            <img  onclick="showimage(this)" src="images/me.jpg" alt="mahmoud ewis">
+        </div>
+        <div id="show-img">
+            <i onclick="showimage(this)" class="fas fa-times"></i>
+            <div id="image">
+
+            </div>
+
+        </div>
+    </section>
+    <script src="chat.js"></script>
+</body>
+</html>
